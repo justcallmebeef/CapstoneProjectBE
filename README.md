@@ -20,7 +20,7 @@ Database: https://github.com/justcallmebeef/CapstoneProjectBE
 
 ### ERD 
 
-![A-SEND ERD](./ClimbVert.pdf)
+![A-SEND ERD](ClimbVert.png)
 
 ## Author
 
