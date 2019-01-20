@@ -7,8 +7,8 @@ exports.up = function(knex, Promise) {
         climber.string('username')
         climber.string('password')
     })
-};
+}
 
 exports.down = function(knex, Promise) {
     return knex.schema.dropTableIfExists('climbVertDB')
-};
+}
