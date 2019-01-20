@@ -4,7 +4,7 @@ The code that holds the database for climbers and routes.
 
 ## API: 
 
-https://climb-capstone-db.herokuapp.com/climbers
+https://capstone-climb-db.herokuapp.com/climbers
 
 ### Technologies 
 
