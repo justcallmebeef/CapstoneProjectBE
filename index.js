@@ -8,7 +8,7 @@ const port = process.env.PORT || 3002
 
 app.use(morgan(process.env.NODE_ENV !== 'production' ? 'dev' : 'combined'))
 app.use(bodyParser.json())
-app.use(cors)
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('Please add climbers to end of URL')
