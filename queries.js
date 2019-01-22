@@ -9,5 +9,11 @@ module.exports = {
     }, 
     createClimber(climber) {
         return database('climbers').insert(climber).returning('*')
+    }, 
+    deleteClimber(id) {
+        return database('climbers').where('id', id).delete()
+    }, 
+    updateClimber(id, climber) {
+        return database('climbers').where('id', id).update(climber).returning('*')
     }
 }

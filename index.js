@@ -26,6 +26,14 @@ app.post('/climbers', (req, res) => {
   queries.createClimber(req.body).then(newClimber => res.json(newClimber[0]))
 })
 
+app.delete('/climbers/:id', (req, res) => {
+  queries.deleteClimber(req.params.id).then(res.sendStatus(204))
+})
+
+app.put('/climbers/:id', (req, res) => {
+  queries.updateClimber(req.params.id, req.body).then(updatedClimber => res.json(updatedClimber[0]))
+})
+
 app.use(notFound)
 app.use(errorHandler)
 
