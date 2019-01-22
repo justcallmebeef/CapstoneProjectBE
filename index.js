@@ -11,11 +11,19 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send('Please add climbers to end of URL')
+  res.send('Please add climbers to end of URL')
 })
 
 app.get('/climbers', (req, res, next) => {
-    queries.listAllClimbers().then(climbers => res.send(climbers)).catch(next)
+  queries.listAllClimbers().then(climbers => res.send(climbers)).catch(next)
+})
+
+app.get('/climbers/:id', (req, res, next) => {
+  queries.getClimbersById(req.params.id).then(climberById => res.json(climberById)).catch(next)
+})
+
+app.post('/climbers', (req, res) => {
+  queries.createClimber(req.body).then(newClimber => res.json(newClimber[0]))
 })
 
 app.use(notFound)
