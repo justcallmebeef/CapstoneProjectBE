@@ -34,6 +34,10 @@ app.put('/climbers/:id', (req, res) => {
   queries.updateClimber(req.params.id, req.body).then(updatedClimber => res.json(updatedClimber[0]))
 })
 
+app.get('/routes', (req, res, next) => {
+  queries.listAllRoutes().then(routes => res.json(routes)).catch(next)
+})
+
 app.use(notFound)
 app.use(errorHandler)
 

@@ -15,5 +15,8 @@ module.exports = {
     }, 
     updateClimber(id, climber) {
         return database('climbers').where('id', id).update(climber).returning('*')
+    },
+    listAllRoutes() {
+        return database('routes')
     }
 }
