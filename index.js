@@ -46,6 +46,10 @@ app.post('/routes', (req, res) => {
   queries.createRoute(req.body).then(newRoute => res.json(newRoute[0]))
 })
 
+app.delete('/routes/:id', (req, res) => {
+  queries.deleteRoute(req.params.id).then(res.sendStatus(204))
+})
+
 app.use(notFound)
 app.use(errorHandler)
 
