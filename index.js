@@ -50,6 +50,10 @@ app.delete('/routes/:id', (req, res) => {
   queries.deleteRoute(req.params.id).then(res.sendStatus(204))
 })
 
+app.put('/routes/:id', (req, res) => {
+  queries.updateRoute(req.params.id, req.body).then(updatedRoute => res.json(updatedRoute[0]))
+})
+
 app.use(notFound)
 app.use(errorHandler)
 

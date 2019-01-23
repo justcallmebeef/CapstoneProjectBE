@@ -27,5 +27,8 @@ module.exports = {
     }, 
     deleteRoute(id) {
         return database('routes').where('id', id).delete()
+    }, 
+    updateRoute(id, route) {
+        return database('routes').where('id', id).update(route).returning('*')
     }
 }
