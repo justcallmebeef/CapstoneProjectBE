@@ -21,5 +21,8 @@ module.exports = {
     }, 
     getRoutesById(id) {
         return database('routes').where('id', id).first()
+    }, 
+    createRoute(route) {
+        return database('routes').insert(route).returning('*')
     }
 }

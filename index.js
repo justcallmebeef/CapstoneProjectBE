@@ -42,6 +42,10 @@ app.get('/routes/:id', (req, res, next) => {
   queries.getRoutesById(req.params.id).then(routeById => res.json(routeById)).catch(next)
 })
 
+app.post('/routes', (req, res) => {
+  queries.createRoute(req.body).then(newRoute => res.json(newRoute[0]))
+})
+
 app.use(notFound)
 app.use(errorHandler)
 
