@@ -38,6 +38,10 @@ app.get('/routes', (req, res, next) => {
   queries.listAllRoutes().then(routes => res.json(routes)).catch(next)
 })
 
+app.get('/routes/:id', (req, res, next) => {
+  queries.getRoutesById(req.params.id).then(routeById => res.json(routeById)).catch(next)
+})
+
 app.use(notFound)
 app.use(errorHandler)
 

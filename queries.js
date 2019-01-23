@@ -18,5 +18,8 @@ module.exports = {
     },
     listAllRoutes() {
         return database('routes')
+    }, 
+    getRoutesById(id) {
+        return database('routes').where('id', id).first()
     }
 }
