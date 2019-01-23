@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Please add climbers to end of URL')
+  res.send('Please add /climbers to the end of URL for climber_users data or /routes for route data')
 })
 
 app.get('/climbers', (req, res, next) => {
