@@ -1,6 +1,6 @@
 # ASEND Backend
 
-![ASEND](asend-black.png)
+![ASEND](small-asend-black.png)
 
 The code that holds the database for climbers and routes.   
 
