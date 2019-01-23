@@ -83,13 +83,13 @@ exports.seed = function(knex, Promise) {
         {
           route_name: 'Half Dome', 
           route_grade: '5.10a', 
-          route_height: 1200, 
+          route_height: 1000, 
           climber_id: 3,
         },
         {
           route_name: 'Half Dome', 
           route_grade: '5.10a', 
-          route_height: 1000, 
+          route_height: 1200, 
           climber_id: 6,
         },
         {
