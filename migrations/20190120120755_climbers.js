@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
         climber.string('first_name')
         climber.string('last_name')
         climber.string('email') 
-        climber.string('username')
         climber.string('password')
     })
 }
